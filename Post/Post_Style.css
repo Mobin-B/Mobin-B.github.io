@@ -1,0 +1,130 @@
+:root {
+  --main_background: #16202c;
+  --main_objects: #5022ba;
+  --main-objects_dark: #321082;
+  --main_text: #ffffff;
+  --main_article_background: #364f6b;
+  --main_article_profile: #47688d;
+  --main_article_border: #3b5674;
+}
+
+body {
+  background-color: var(--main_background);
+}
+
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+
+textarea::-webkit-scrollbar-thumb {
+background-color: rgba(169, 169, 169, 0);
+outline: 1px solid rgba(112, 128, 144, 0);
+border-radius: 100px;
+}
+
+hr {
+  opacity: 0.3;
+}
+
+.main_article {
+  height: auto;
+  background-color: var(--main_article_background);
+  margin: 30px 17px;
+  padding: 30px;
+  border: solid var(--main-objects_dark) 3px;
+  border-radius: 30px;
+}
+
+#username {
+  margin: auto;
+  width: 140px;
+  color: var(--main_text);
+  background-color: var(--main_article_profile);
+  padding: 8px 17px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  border-radius: 17px;
+  border: solid 2px var(--main_article_border);
+  font-size: medium;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#username:focus{
+  border-radius: 30px;
+  border: solid 2px var(--main-objects_dark);
+  outline: none;
+}
+
+
+.moit {
+  width: 80%;
+  display: block;
+  color: var(--main_text);
+  background-color: var(--main_article_profile);
+  padding: 17px 23px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  line-height: 30px;
+  border-radius: 17px;
+  border: solid 2px var(--main_article_border);
+  resize: none;
+  transition: .3s;
+}
+.moit:focus{
+  border: var(--main-objects_dark) solid 2px;
+  outline: none;
+  border-radius: 25px;
+}
+
+
+.article_footer {
+  float: right;
+  margin-top: 7px;
+  color: var(--main_text);
+  background-color: var(--main_objects);
+  font-size: large;
+  padding: 10px 17px;
+  border-radius: 30px;
+  text-align: center;
+  border: solid 3px var(--main-objects_dark);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+#menu {
+  position: sticky;
+  padding: 20px;
+  margin: auto;
+  width: 53%;
+  border-radius: 30px;
+  background-color: var(--main_objects);
+  border: 3px solid var(--main-objects_dark);
+  bottom: 17px;
+  color: var(--main_text);
+  font-size: x-large;
+  text-align: center;
+}
+
+.menu_items {
+  margin: 3px 2.2vw;
+}
+
+#house {
+  opacity: 0.5;
+}
+
+#search {
+  opacity: 0.5;
+}
+
+#post {
+  opacity: 1;
+}
+
+#profile {
+  opacity: 0.5;
+}

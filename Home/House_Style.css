@@ -1,0 +1,137 @@
+
+:root {
+  --main_background: #16202c;
+  --main_objects: #5022ba;
+  --main-objects_dark: #321082;
+  --main_text: #ffffff;
+  --main_article_background: #364f6b;
+  --main_article_profile: #47688d;
+  --main_article_border: #3b5674;
+}
+
+body {
+  background-color: var(--main_background);
+}
+
+hr {
+  opacity: 0.3;
+}
+
+#main {
+  background-color: var(--main_article_profile);
+  border: solid 3px var(--main_article_background);
+  border-radius: 14px;
+}
+
+#logo {
+  display: block;
+  width: 120px;
+  margin: auto;
+}
+
+.main_article {
+  height: auto;
+  background-color: var(--main_article_background);
+  margin: 30px 17px;
+  padding: 30px;
+  border: solid var(--main-objects_dark) 3px;
+  border-radius: 30px;
+}
+
+
+.article_avatar {
+  display: inline-block;
+  height: 50px;
+  vertical-align: middle;
+  border-radius: 30px;
+}
+
+.article_username {
+  width: 75px;
+  color: var(--main_text);
+  display: inline-block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  margin: 1px 0 0 8px;
+  vertical-align: middle;
+}
+
+.article_fallow {
+  color: var(--main_text);
+  background-color: var(--main_objects);
+  padding: 5px 7px 5px 7px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 8px;
+  display: inline-block;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: x-large;
+  margin: 1px 0 0 17vw;
+}
+
+.moit {
+  color: var(--main_text);
+  background-color: var(--main_article_profile);
+  padding: 8px 17px;
+  margin-top: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 30px;
+  border-radius: 20px;
+  border: solid 2px var(--main_article_border);
+}
+
+.moit_image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.article_footer {
+  margin-top: 12px;
+  color: var(--main_text);
+  background-color: var(--main_article_profile);
+  font-size: large;
+  padding: 10px 5px;
+  border-radius: 30px;
+  text-align: center;
+  border: solid 2px var(--main_article_border);
+}
+
+.article_footer_items {
+  margin: 12px 3vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+}
+
+#menu {
+  position: sticky;
+  padding: 20px;
+  margin: auto;
+  width: 53%;
+  border-radius: 30px;
+  background-color: var(--main_objects);
+  border: 3px solid var(--main-objects_dark);
+  bottom: 17px;
+  color: var(--main_text);
+  font-size: x-large;
+  text-align: center;
+}
+
+.menu_items {
+  margin: 3px 2.2vw;
+}
+
+#house {
+  opacity: 1;
+}
+
+#search {
+  opacity: 0.5;
+}
+
+#chat {
+  opacity: 0.5;
+}
+
+#profile {
+  opacity: 0.5;
+}
