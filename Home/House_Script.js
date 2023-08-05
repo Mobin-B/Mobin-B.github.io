@@ -1,3 +1,3 @@
 function post(){
-    location = "https://mobin-b.github.io/Moiter/Post/Post.html"
+    location = "https://mobin-b.github.io/Post/Post.html"
 }
