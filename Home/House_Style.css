@@ -7,6 +7,54 @@
   --main_article_profile: #5B9A8B;
 }
 
+/* Scrollbar settings */
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f7ea8700;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f7ea8700;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--main_background);
+  background: var(--main_text);
+}
+
+::selection {
+  color: var(--main_background);
+  background: var(--main_text);
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--main_background);
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--main_background);
+}
+
 body {
   background-color: var(--main_background);
 }

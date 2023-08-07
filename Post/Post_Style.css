@@ -6,7 +6,24 @@
   --main_article_profile: #5B9A8B;
 }
 
-::-moz-selection { /* Code for Firefox */
+/* Scrollbar settings */
+/* width */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f7ea8700;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f7ea8700;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
   color: var(--main_background);
   background: var(--main_text);
 }
