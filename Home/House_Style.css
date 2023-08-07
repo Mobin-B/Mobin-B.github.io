@@ -1,12 +1,10 @@
 
 :root {
-  --main_background: #16202c;
-  --main_objects: #5022ba;
-  --main-objects_dark: #321082;
+  --main_background: #252B48;
+  --main_objects: #F7E987;
   --main_text: #ffffff;
-  --main_article_background: #364f6b;
-  --main_article_profile: #47688d;
-  --main_article_border: #3b5674;
+  --main_article_background: #445069;
+  --main_article_profile: #5B9A8B;
 }
 
 body {
@@ -19,7 +17,6 @@ hr {
 
 #main {
   background-color: var(--main_article_profile);
-  border: solid 3px var(--main_article_background);
   border-radius: 14px;
 }
 
@@ -34,7 +31,7 @@ hr {
   background-color: var(--main_article_background);
   margin: 30px 17px;
   padding: 30px;
-  border: solid var(--main-objects_dark) 3px;
+  border: solid var(--main_objects) 3px;
   border-radius: 30px;
 }
 
@@ -77,7 +74,7 @@ hr {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 30px;
   border-radius: 20px;
-  border: solid 2px var(--main_article_border);
+  border: solid 2px var(--main_background);
 }
 
 .moit_image {
@@ -93,7 +90,7 @@ hr {
   padding: 10px 5px;
   border-radius: 30px;
   text-align: center;
-  border: solid 2px var(--main_article_border);
+  border: solid 2px var(--main_background);
 }
 
 .article_footer_items {
@@ -106,12 +103,12 @@ hr {
   position: sticky;
   padding: 20px;
   margin: auto;
-  width: 53%;
+  width: 40%;
   border-radius: 30px;
   background-color: var(--main_objects);
-  border: 3px solid var(--main-objects_dark);
+  border: 3px solid var(--main_objects);
   bottom: 17px;
-  color: var(--main_text);
+  color: var(--main_background);
   font-size: x-large;
   text-align: center;
 }

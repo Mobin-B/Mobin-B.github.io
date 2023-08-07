@@ -11,18 +11,18 @@
 
 <body>
 
-  <main>
+  <main class="not-selectable">
 
-    <article class="main_article">
+    <article class="main_article not-selectable">
 
 
       <input type="text" maxlength="12" id="username" placeholder="Enter your name">
 
 
-      <textarea name="" id="" cols="30" rows="10" class="moit" maxlength="2000"
+      <textarea name="" id="" rows="5" class="moit" maxlength="2000"
         placeholder="Write what you want..."></textarea>
 
-      <button class="article_footer">Submit</button>
+      <button class="article_footer not-selectable">Submit</button>
 
     </article>
 
@@ -33,11 +33,8 @@
   <br>
 
 
-  <footer id="menu">
-    <i class="bi bi-house-door-fill menu_items" id="house" onclick="home()"></i>
-    <i class="bi bi-search-heart-fill menu_items" id="search"></i>
-    <i class="bi bi-chat-square-text-fill menu_items" id="post"></i>
-    <i class="bi bi-person-circle menu_items" id="profile"></i>
+  <footer id="menu" class="not-selectable">
+    <i class="bi bi-arrow-left-circle-fill menu_items not-selectable" id="back" onclick="home()"></i>
   </footer>
 </body>
 
