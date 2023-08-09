@@ -7,6 +7,16 @@
   --main_article_profile: #5B9A8B;
 }
 
+@font-face {
+  font-family: DiodrumArabic-Semibold;
+  src: url(../Database/Fonts/DiodrumArabic-Semibold.ttf);
+}
+
+@font-face {
+  font-family: DiodrumArabic-Medium;
+  src: url(../Database/Fonts/DiodrumArabic-Medium.ttf);
+}
+
 /* Scrollbar settings */
 /* width */
 ::-webkit-scrollbar {
@@ -81,6 +91,7 @@ hr {
   padding: 30px;
   border: solid var(--main_objects) 3px;
   border-radius: 30px;
+  box-shadow: 0px 5px 17px hsla(0, 0%, 5%, 0.3);
 }
 
 
@@ -117,12 +128,13 @@ hr {
 .moit {
   color: var(--main_text);
   background-color: var(--main_article_profile);
-  padding: 8px 17px;
-  margin-top: 14px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 14px;
+  margin-top: 12px;
+  font-family: DiodrumArabic-Medium;
   line-height: 30px;
   border-radius: 20px;
   border: solid 2px var(--main_background);
+  text-align: center;
 }
 
 .moit_image {
@@ -159,6 +171,7 @@ hr {
   color: var(--main_background);
   font-size: x-large;
   text-align: center;
+  box-shadow: 0px 5px 17px hsla(0, 0%, 5%, 0.3);
 }
 
 .menu_items {
