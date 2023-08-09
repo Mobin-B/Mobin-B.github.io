@@ -1,7 +1,7 @@
 
 
 var request = new XMLHttpRequest();
-request.open('GET', '../Database/Json/Posts.json');
+request.open('GET', 'https://mobin-b.github.io/Database/Json/Posts.json');
 
 var posts = JSON.parse(request.responseText);
 
