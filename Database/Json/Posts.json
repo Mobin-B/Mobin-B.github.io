@@ -5,31 +5,9 @@
     "like": 200,
     "dislike": 128
   },
-
   {
     "username": "AliReza",
     "text": "بابا اومدی بالاخره نازنینم حسن عطایی را با کیفیت های مختلف در قالب های صوتی و ویدئویی به همراه گزارش تصویری مراسم به صورت آنلاین  مشاهده 📍  و  درصورت نیاز دریافت کنید",
-    "like": 1350,
-    "dislike": 20
-  },
-
-  {
-    "username": "MohammadReza",
-    "text": "I fixed this by searching 🔍 for 'Complete Function Calls' in VS Code's settings, and checking JavaScript > Suggest: Complete Function Calls. Thanks Mark for the suggestion.",
-    "like": 1350,
-    "dislike": 20
-  },
-
-  {
-    "username": "Mohsen",
-    "text": "Visual Studio Code Autocomplete Add Parentheses After Method in .js File 😀",
-    "like": 1350,
-    "dislike": 20
-  },
-
-  {
-    "username": "Ali",
-    "text": "When I type ⌨️ console.lo in a .js file in Visual Studio Code ✅, I can hit Enter, and autocomplete will change my line to console.log. However, I would also like autocomplete  to add parentheses. This question was already asked using the Go programming language. I tried adding js.useCodeSnippetsOnFunctionSuggest as well as javascript.useCodeSnippetsOnFunctionSuggest. Neither of these work. I also tried useCodeSnippetsOnMethodSuggest as suggested here, but that didn't work either. What am I doing wrong?",
     "like": 1350,
     "dislike": 20
   }
