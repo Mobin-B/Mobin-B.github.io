@@ -138,7 +138,7 @@ hr {
 }
 
 
-.article_footer {
+#submit {
   float: right;
   margin-top: 7px;
   color: var(--main_background);
@@ -154,15 +154,12 @@ hr {
   transition: 0.3s;
 }
 
-.article_footer:active {
-  transform: scale(1.1);
-}
 
 
 #menu {
   position: fixed;
   padding: 12px;
-  margin: auto;
+  margin: 0 12px;
   border-radius: 30px;
   background-color: var(--main_objects);
   border: 3px solid var(--main_objects);
@@ -172,10 +169,6 @@ hr {
   text-align: center;
   box-shadow: 0px 8px 14px rgba(13, 13, 13, 0.353);
   transition: 0.3s;
-}
-
-#menu:active {
-  transform: scale(1.1);
 }
 
 .menu_items {

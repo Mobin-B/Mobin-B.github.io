@@ -2,15 +2,19 @@
 
 var request = new XMLHttpRequest();
 
+var file;
+
 request.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-        var file = JSON.parse(this.responseText);
+        file = JSON.parse(this.responseText);
         loadfunc(file);
     }
 }
 
 request.open("GET", "https://mobin-b.github.io/Database/Json/Posts.json", true);
 request.send();
+
+var load_numbers = 5;
 
 function loadfunc(text) {
 
@@ -21,20 +25,15 @@ function loadfunc(text) {
     var output = "";
 
 
-    for (var key in text) {
 
+    for (var key = text.length - 1; key >= 0 && key > text.length - load_numbers; key--) {
         var profile = Math.floor(Math.random() * 11);
         output += '<article class="main_article not-selectable">';
 
-        output += '<header class="article_profile"><img src="../Database/Image/Profiles/' + profile + '.png" alt="" class="article_avatar">';
-        output += '<h5 class="article_username">' + text[key].username + '</h5>';
+        output += '<header class="article_profile"><img src="https://mobin-b.github.io/Database/Image/Profiles/' + profile + '.png" alt="" class="article_avatar">';
+        output += '<h5 class="article_username">' + text[key].username + '</h5></header>';
 
         output += '<article class="moit"><p>' + text[key].text + '</p></article>';
-
-        output += '<footer class="article_footer">';
-        output += '<i class="bi bi-hand-thumbs-up article_footer_items">&nbsp; ' + text[key].like + '</i>';
-        output += '<i class="bi bi-hand-thumbs-down article_footer_items">&nbsp; ' + text[key].dislike + '</i>';
-        output += '</footer>'
 
         output += '</article><hr>';
     }
@@ -43,36 +42,39 @@ function loadfunc(text) {
     main_articles.innerHTML = output;
 }
 
-// var text = JSON.parse(request.responseText);
+// ------------------------------------------------------------------
 
-// request.onreadystatechange = function () {
-//     if (request.readyState === 4 && request.status === 200) {
+function load_more() {
 
-//         var output;
-//         for (var key in text) {
-//             output += '<article class="main_article not-selectable">';
+    var main_articles = document.querySelector("#articles");
 
-//             output += '<header class="article_profile"><img src="../Database/Image/Profiles/Avatar.webp" alt="" class="article_avatar">';
-//             output += '<h5 class="article_username">' + text[key].username + '</h5>';
+    var output = "";
 
-//             output += '<article class="moit"><p>' + text[key].text + '</p></article>';
+    for (var key = file.length - load_numbers; key >= 0 && key > file.length - (load_numbers + 5); key--) {
+        var profile = Math.floor(Math.random() * 11);
+        output += '<article class="main_article not-selectable">';
 
-//             output += '<footer class="article_footer">';
-//             output += '<i class="bi bi-hand-thumbs-up article_footer_items">&nbsp; ' + text[key].like + '</i>';
-//             output += '<i class="bi bi-hand-thumbs-down article_footer_items">&nbsp; ' + text[key].dislike + '</i>';
-//             output += '</footer>'
+        output += '<header class="article_profile"><img src="https://mobin-b.github.io/Database/Image/Profiles/' + profile + '.png" alt="" class="article_avatar">';
+        output += '<h5 class="article_username">' + file[key].username + '</h5></header>';
 
-//             output += '</article><hr>';
-//         }
+        output += '<article class="moit"><p>' + file[key].text + '</p></article>';
 
-//         document.getElementById(articles).innerHTML = output;
+        output += '</article><hr>';
+    }
 
-//     }
-// }
+    main_articles.innerHTML += output;
+    load_numbers += 5;
 
+}
 
-
+// ------------------------------------------------------------------
 
 function post() {
     location = "https://mobin-b.github.io/Post/Post.html"
 }
+
+function user() {
+    location = "https://mobin-b.github.io/Setting/User.html"
+}
+
+// ------------------------------------------------------------------
