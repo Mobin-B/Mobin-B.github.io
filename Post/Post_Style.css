@@ -124,15 +124,15 @@ hr {
 }
 
 .profile_img{
-  width: 51px;
+  width: 63px;
   margin: 3px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 #username {
   display: block;
   margin: auto;
-  width: 60vw;
+  width: 63vw;
   color: var(--main_text);
   background-color: var(--main_article_profile);
   padding: 8px 14px;
@@ -155,7 +155,7 @@ hr {
 .moit {
   display: block;
   margin: 14px auto;
-  width: 60vw;
+  width: 61vw;
   color: var(--main_text);
   background-color: var(--main_article_profile);
   padding: 17px;
