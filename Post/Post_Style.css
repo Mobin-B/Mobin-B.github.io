@@ -102,7 +102,7 @@ hr {
   padding: 5px;
   overflow: auto;
   text-align: center;
-  border-radius: 18px;
+  border-radius: 17px;
 }
 
 /* HIDE RADIO */
@@ -121,6 +121,7 @@ hr {
 /* CHECKED STYLES */
 [type=radio]:checked + img.profile_img {
   outline: 2px solid var(--main_article_profile);
+  border-radius: 12px;
 }
 
 .profile_img{
@@ -178,7 +179,7 @@ hr {
 
 #submit {
   float: right;
-  margin-top: 7px;
+  margin-top: 3px;
   color: var(--main_background);
   background-color: var(--main_objects);
   font-size: large;

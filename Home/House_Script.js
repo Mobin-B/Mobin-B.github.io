@@ -16,18 +16,19 @@ request.send();
 
 var load_numbers = 5;
 
+
 function loadfunc(text) {
 
 
 
     var main_articles = document.querySelector("#articles");
-
+    console.log(main_articles);
     var output = "";
 
 
 
     for (var key = text.length - 1; key >= 0 && key > text.length - load_numbers; key--) {
-        var profile = Math.floor(Math.random() * 11);
+        var profile = Math.floor(Math.random() * 18);
         output += '<article class="main_article not-selectable">';
 
         output += '<header class="article_profile"><img src="https://mobin-b.github.io/Database/Image/Profiles/' + profile + '.png" alt="" class="article_avatar">';

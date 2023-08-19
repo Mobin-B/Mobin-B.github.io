@@ -2,61 +2,58 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moiter</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="Post_Style.css" />
-  <script src="Post_Script.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moiter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="Post_Style.css" />
+    <script src="Post_Script.js"></script>
 </head>
 
-<body>
+<body onload="load_page()">
 
-  <main class="not-selectable" id="main">
+    <main class="not-selectable" id="main">
 
-    <article class="main_article not-selectable">
+        <article class="main_article not-selectable">
 
-      <form id="profiles" class="not-selectable" name="profiles">
-        <label class="profile"><input type="radio" name="profile" checked><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/0.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/1.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/2.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/3.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/4.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/5.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/6.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/7.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/8.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/9.png" alt="" class="profile_img"></label>
-        <label class="profile"><input type="radio" name="profile"><img
-            src="https://mobin-b.github.io/Database/Image/Profiles/10.png" alt="" class="profile_img"></label>
-      </form>
+            <form id="profiles" class="not-selectable" name="profiles">
+                <label class="profile"><input type="radio" name="profile" checked><img
+                        src="https://mobin-b.github.io/Database/Image/Profiles/17.png" alt=""
+                        class="profile_img"></label>
+                <label class="profile"><input type="radio" name="profile"><img
+                        src="https://mobin-b.github.io/Database/Image/Profiles/1.png" alt=""
+                        class="profile_img"></label>
+                <label class="profile"><input type="radio" name="profile"><img
+                        src="https://mobin-b.github.io/Database/Image/Profiles/2.png" alt=""
+                        class="profile_img"></label>
+                <label class="profile"><input type="radio" name="profile"><img
+                        src="https://mobin-b.github.io/Database/Image/Profiles/3.png" alt=""
+                        class="profile_img"></label>
+                <label class="profile"><input type="radio" name="profile"><img
+                        src="https://mobin-b.github.io/Database/Image/Profiles/4.png" alt=""
+                        class="profile_img"></label>
+                <label class="profile"><input type="radio" name="profile"><img
+                        src="https://mobin-b.github.io/Database/Image/Profiles/5.png" alt=""
+                        class="profile_img"></label>
+            </form>
 
-      <input type="text" maxlength="12" id="username" placeholder="Enter your name" autocomplete="name">
+            <input type="text" maxlength="12" id="username" placeholder="Enter your name" autocomplete="name">
 
 
-      <textarea name="text" rows="5" class="moit" maxlength="2000" placeholder="Write what you want..."></textarea>
+            <textarea name="text" rows="5" class="moit" maxlength="2000"
+                placeholder="Write what you want..."></textarea>
 
-      <button id="submit" class="not-selectable">Submit</button>
+            <button id="submit" class="not-selectable" onclick="submit()">Submit</button>
 
-    </article>
-
-
-  </main>
+        </article>
 
 
-  <footer id="menu" class="not-selectable" onclick="home()">
-    <i class="bi bi-arrow-left-circle-fill menu_items not-selectable" id="back"></i>
-  </footer>
+    </main>
+
+
+    <footer id="menu" class="not-selectable" onclick="home()">
+        <i class="bi bi-arrow-left-circle-fill menu_items not-selectable" id="back"></i>
+    </footer>
 </body>
 
 </html>
