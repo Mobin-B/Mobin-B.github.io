@@ -17,6 +17,13 @@ function submit() {
             selected_char = document.getElementById(i).id;
         }
     }
+
+    var username = document.querySelector("#username").value;
+
+    var text = document.querySelector("#textarea").value;
+
+    console.log(username);
+    console.log(text);
     
 }
 

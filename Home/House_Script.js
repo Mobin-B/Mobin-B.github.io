@@ -22,7 +22,7 @@ function loadfunc(text) {
 
 
     var main_articles = document.querySelector("#articles");
-    console.log(main_articles);
+    
     var output = "";
 
 
