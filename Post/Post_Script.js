@@ -1,3 +1,5 @@
+var usernames = ["Mobin", "Alireza"];
+
 var pictures_num = 17;
 
 function load_page() {
@@ -11,6 +13,12 @@ function load_page() {
 }
 
 
+function home() {
+    location = "https://mobin-b.github.io/Home/House.html"
+}
+
+
+
 function submit() {
     var selected_char = 0;
     for (var i = pictures_num; i >= 0; i--) {
@@ -21,22 +29,39 @@ function submit() {
     var username = document.querySelector("#username").value;
     var text = document.querySelector("#textarea").value;
 
-    var request = new XMLHttpRequest();
+    if (username in usernames && text.length >= 17) {
+        var post_data = {};
+        post_data.id = Math.floor(Math.random() * 9935);
+        post_data.profileID = selected_char;
+        post_data.username = username;
+        post_data.text = text;
 
-    request.open("POST", "https://mobin-b.github.io/Database/Json/Posts.json");
+        var request = new XMLHttpRequest();
 
-    request.onreadystatechange = function () {
+        request.open("POST", "https://mobin-b.github.io/Database/Json/Posts.json");
 
-        if (this.readyState === 400 && this.status === 201) {
-            
+        request.onreadystatechange = function () {
+
+            if (this.readyState === 400 && this.status === 201) {
+
+            }
         }
+
+        request.setRequestHeader("Content-Type", "application/json");
+
+        request.send(JSON.stringify(post_data))
+
+        home();
+    }
+
+    else if (text.length <= 17) {
+        document.querySelector("#textarea").style.border = "2px solid #ff3c3c"
+        document.querySelector("#username").style.border = "2px solid #5b9a8b"
+    }
+
+    else {
+        document.querySelector("#username").style.border = "2px solid #ff3c3c"
+        document.querySelector("#textarea").style.border = "2px solid #5b9a8b"
     }
 
 }
-
-
-
-function home() {
-    location = "https://mobin-b.github.io/Home/House.html"
-}
-

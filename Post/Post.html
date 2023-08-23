@@ -37,10 +37,10 @@
                         class="profile_img"></label>
             </form>
 
-            <input type="text" maxlength="12" id="username" placeholder="Enter your name" autocomplete="name">
+            <input type="text" minlength="3" maxlength="12" id="username" placeholder="Enter your name" autocomplete="name">
 
 
-            <textarea name="text" id="textarea" rows="5" class="moit" maxlength="2000"
+            <textarea name="text" id="textarea" rows="5" class="moit" minlength="170" maxlength="2000"
                 placeholder="Write what you want..."></textarea>
 
             <button id="submit" class="not-selectable" onclick="submit()">Submit</button>
