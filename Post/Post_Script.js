@@ -29,7 +29,9 @@ function submit() {
     var username = document.querySelector("#username").value;
     var text = document.querySelector("#textarea").value;
 
-    if (username in usernames && text.length >= 17) {
+    
+
+    if (usernames.includes(username) && text.length >= 17) {
         var post_data = {};
         post_data.id = Math.floor(Math.random() * 9935);
         post_data.profileID = selected_char;
@@ -43,7 +45,7 @@ function submit() {
         request.onreadystatechange = function () {
 
             if (this.readyState === 400 && this.status === 201) {
-
+                alert("Hello")
             }
         }
 
@@ -51,7 +53,8 @@ function submit() {
 
         request.send(JSON.stringify(post_data))
 
-        home();
+        
+        
     }
 
     else if (text.length <= 17) {
