@@ -111,11 +111,13 @@ hr {
   opacity: 0;
   width: 0;
   height: 0;
+  border-radius: 12px;
 }
 
 /* IMAGE STYLES */
 [type=radio] + img.profile_img {
   cursor: pointer;
+  border-radius: 12px;
 }
 
 /* CHECKED STYLES */

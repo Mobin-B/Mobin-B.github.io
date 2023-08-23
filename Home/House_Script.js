@@ -31,7 +31,7 @@ function loadfunc(text) {
         var profile = Math.floor(Math.random() * 18);
         output += '<article class="main_article not-selectable">';
 
-        output += '<header class="article_profile"><img src="https://mobin-b.github.io/Database/Image/Profiles/' + profile + '.png" alt="" class="article_avatar">';
+        output += '<header class="article_profile"><img src="https://mobin-b.github.io/Database/Image/Profiles/' + text[key].profileID + '.png" alt="" class="article_avatar">';
         output += '<h5 class="article_username">' + text[key].username + '</h5></header>';
 
         output += '<article class="moit"><p>' + text[key].text + '</p></article>';

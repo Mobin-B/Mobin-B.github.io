@@ -10,23 +10,33 @@ function load_page() {
     characters.innerHTML = output;
 }
 
+
 function submit() {
     var selected_char = 0;
-    for(var i = pictures_num; i>=0; i--){
-        if (document.getElementById(i).checked){
+    for (var i = pictures_num; i >= 0; i--) {
+        if (document.getElementById(i).checked) {
             selected_char = document.getElementById(i).id;
         }
     }
-
     var username = document.querySelector("#username").value;
-
     var text = document.querySelector("#textarea").value;
 
-    console.log(username);
-    console.log(text);
-    
+    var request = new XMLHttpRequest();
+
+    request.open("POST", "https://mobin-b.github.io/Database/Json/Posts.json");
+
+    request.onreadystatechange = function () {
+
+        if (this.readyState === 400 && this.status === 201) {
+            
+        }
+    }
+
 }
+
+
 
 function home() {
     location = "https://mobin-b.github.io/Home/House.html"
 }
+
