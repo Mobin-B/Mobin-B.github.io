@@ -157,7 +157,7 @@ hr {
 
 .moit {
   display: block;
-  margin: 14px auto;
+  margin: 12px auto;
   width: 61vw;
   color: var(--main_text);
   background-color: var(--main_article_profile);
@@ -165,17 +165,66 @@ hr {
   font-family: DiodrumArabic-Medium;
   font-size: larger;
   line-height: 30px;
-  border-radius: 17px;
+  border-radius: 17px 17px 0 0;
   border: solid 2px var(--main_article_profile);
   resize: none;
   transition: 0.3s;
   text-align: center;
+  margin-bottom: 0;
 }
 
 .moit:focus {
   border: var(--main_background) solid 2px;
   outline: none;
-  border-radius: 25px;
+  border-radius: 25px 25px 0 0;
+}
+
+#progress_footer{
+  display: block;
+  margin: auto auto 12px auto;
+  width: 61vw;
+  height: 20px;
+  padding: 5px 17px;
+  border: var(--main_background) 2px solid;
+  background-color: var(--main_background);
+  border-radius: 0 0 17px 17px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+#progress {
+  position: relative;
+  display: inline-block;
+  background: var(--main_article_background);
+  height: 14px;
+  border-radius: 6px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--main_article_background);
+}
+progress::-moz-progress-bar {
+  background-color: var(--main_article_background);
+}
+
+::-webkit-progress-value {
+  background-color: var(--main_objects);
+}
+
+::-moz-progress-bar {
+  background-color: var(--main_objects);
+}
+
+#progress_text{
+  display: inline-block;
+  margin: 0 0 0 10px;
+  width: 58px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+  color: var(--main_text);
+  vertical-align: middle;
 }
 
 

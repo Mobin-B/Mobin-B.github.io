@@ -29,7 +29,7 @@ function submit() {
     var username = document.querySelector("#username").value;
     var text = document.querySelector("#textarea").value;
 
-    
+
 
     if (usernames.includes(username) && text.length >= 17) {
         var post_data = {};
@@ -53,8 +53,8 @@ function submit() {
 
         request.send(JSON.stringify(post_data))
 
-        
-        
+
+
     }
 
     else if (text.length <= 17) {
@@ -67,4 +67,13 @@ function submit() {
         document.querySelector("#textarea").style.border = "2px solid #5b9a8b"
     }
 
+}
+
+function length_check() {
+    var text_area = document.querySelector("#textarea");
+    console.log(text_area.value.length);
+    var length_text = document.querySelector("#progress_text");
+    length_text.innerHTML = text_area.value.length + "/140";
+    var progress = document.querySelector("#progress");
+    progress.value = text_area.value.length;
 }

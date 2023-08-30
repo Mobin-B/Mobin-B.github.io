@@ -37,11 +37,14 @@
                         class="profile_img"></label>
             </form>
 
-            <input type="text" minlength="3" maxlength="12" id="username" placeholder="Enter your name" autocomplete="name">
+            <input type="text" minlength="3" maxlength="12" id="username" placeholder="Enter your name"
+                autocomplete="name">
 
 
-            <textarea name="text" id="textarea" rows="5" class="moit" minlength="170" maxlength="2000"
-                placeholder="Write what you want..."></textarea>
+            <textarea name="text" id="textarea" rows="4" class="moit" maxlength="140"
+                placeholder="Write what you want..." onkeyup="length_check()"></textarea>
+
+            <footer id="progress_footer"><progress value="0" max="140" id="progress"></progress><p id="progress_text">0/140</p></footer>
 
             <button id="submit" class="not-selectable" onclick="submit()">Submit</button>
 
