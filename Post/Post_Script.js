@@ -40,7 +40,7 @@ function submit() {
 
         var request = new XMLHttpRequest();
 
-        request.open("POST", "https://mobin-b.github.io/Database/Json/Posts.json");
+        request.open("POST", "https://mobin-b.github.io/Database/Json/Posts.json", true);
 
         request.onreadystatechange = function () {
 
