@@ -118,6 +118,7 @@ hr {
 [type=radio]+img.profile_img {
   cursor: pointer;
   border-radius: 12px;
+  transition: 0.3s;
 }
 
 /* CHECKED STYLES */
@@ -222,7 +223,8 @@ progress::-moz-progress-bar {
 
 #progress_text {
   display: inline-block;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 5px;
+  text-align: end;
   width: 58px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
@@ -244,7 +246,7 @@ progress::-moz-progress-bar {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: normal;
   font-weight: bold;
-  transition: 0.3s;
+  
 }
 
 
@@ -261,9 +263,128 @@ progress::-moz-progress-bar {
   font-size: xx-large;
   text-align: center;
   box-shadow: 0px 8px 14px rgba(13, 13, 13, 0.353);
-  transition: 0.3s;
 }
 
 .menu_items {
   margin: 3px 3px 0 3px;
+}
+
+
+
+@media (min-width : 835px) and (min-height: 414px) {
+  #message_box {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    height: fit-content;
+    max-height: 80vh;
+
+  }
+
+  #profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: start;
+    margin: 0;
+    width: 30%;
+    height: 50vh;
+    background-color: var(--main_background);
+    transition: 0.3s;
+  }
+
+  #profiles:hover {
+    transform: scale(1.03);
+  }
+
+  /* .profile_img{
+    transition: 0.3s;
+  }
+  .profile_img:hover{
+    border-radius: 35px;
+  } */
+
+
+  [type=radio]+img.profile_img:hover {
+    border-radius: 23px;
+    transform: scale(1.17);
+  }
+
+  #message_data {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    flex-grow: 1;
+    height: 50vh;
+    margin-left: 17px;
+  }
+
+  #username {
+    display: flex;
+    width: 30%;
+    margin: 0;
+    margin-bottom: 17px;
+    font-size: x-large;
+    border-radius: 17px 17px 17px 0;
+    height: 5vh;
+  }
+
+  #username:focus {
+    width: 40%;
+    border-radius: 23px 23px 23px 0;
+  }
+
+
+  #message_text {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-grow: 1;
+  }
+
+  #textarea {
+    margin: 0;
+    flex-grow: 1;
+    border-radius: 0 17px 0 0;
+  }
+
+  #textarea:focus {
+    border-radius: 0 23px 0 0;
+  }
+
+  #progress_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+
+  }
+
+  #progress {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  #submit {
+    cursor: pointer;
+    width: 15%;
+    transition: 0.3s;
+  }
+
+  #submit:hover {
+    width: 20%;
+    
+  }
+
+  #menu {
+    border-radius: 17px;
+    cursor: pointer;
+    width: 50px;
+    transition: 0.3s;
+  }
+  #menu:hover{
+    border-radius: 30px;
+    width: 100px;
+  }
 }

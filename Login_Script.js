@@ -1,3 +1,3 @@
 function login(){
-    location = "https://mobin-b.github.io/Home/House.html"
+    location = "Home/House.html"
 }

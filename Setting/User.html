@@ -64,13 +64,49 @@
         text-align: center;
         box-shadow: 0px 0px 8px #1e1e1e43;
     }
+
+    @media (min-width : 835px) and (min-height: 414px) {
+        body {
+            display: flex;
+        }
+
+        img {
+
+            width: 50%;
+        }
+
+        h1{
+            width: auto;
+            height: auto;
+            background-color: #15536b00;
+            border: 0;
+            margin: 0;
+            padding: 80px;
+        }
+        h1:hover{
+            transform: scale(1.8) rotate(90deg);
+            font-weight: bolder;
+        }
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            height: 80vh;
+            margin: 30px;
+            background-color: #15526b;
+            transition: 0.3s;
+        }
+        
+    }
 </style>
 
 <body>
 
     <img src="../Database/Image/Template/Loading.png" alt="" class="not-selectable">
-    <h1 class="not-selectable">Coming Soon</h1>
-
+    <div>
+        <h1 class="not-selectable">Coming Soon</h1>
+    </div>
     <footer id="menu" class="not-selectable" onclick="home()">
         <i class="bi bi-arrow-left-circle-fill menu_items not-selectable" id="back"></i>
     </footer>
@@ -78,7 +114,7 @@
 </body>
 <script>
     function home() {
-        location = "https://mobin-b.github.io/Home/House.html"
+        location = "../Home/House.html"
     }
 </script>
 

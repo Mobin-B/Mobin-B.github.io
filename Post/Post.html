@@ -16,35 +16,45 @@
 
         <article class="main_article not-selectable">
 
-            <form id="profiles" class="not-selectable" name="profiles">
-                <label class="profile"><input type="radio" name="profile" checked><img
-                        src="https://mobin-b.github.io/Database/Image/Profiles/17.png" alt=""
-                        class="profile_img"></label>
-                <label class="profile"><input type="radio" name="profile"><img
-                        src="https://mobin-b.github.io/Database/Image/Profiles/1.png" alt=""
-                        class="profile_img"></label>
-                <label class="profile"><input type="radio" name="profile"><img
-                        src="https://mobin-b.github.io/Database/Image/Profiles/2.png" alt=""
-                        class="profile_img"></label>
-                <label class="profile"><input type="radio" name="profile"><img
-                        src="https://mobin-b.github.io/Database/Image/Profiles/3.png" alt=""
-                        class="profile_img"></label>
-                <label class="profile"><input type="radio" name="profile"><img
-                        src="https://mobin-b.github.io/Database/Image/Profiles/4.png" alt=""
-                        class="profile_img"></label>
-                <label class="profile"><input type="radio" name="profile"><img
-                        src="https://mobin-b.github.io/Database/Image/Profiles/5.png" alt=""
-                        class="profile_img"></label>
-            </form>
+            <div id="message_box">
 
-            <input type="text" minlength="3" maxlength="12" id="username" placeholder="Enter your name"
-                autocomplete="name">
+                <form id="profiles" class="not-selectable" name="profiles">
+                    <label class="profile"><input type="radio" name="profile" checked><img
+                            src="https://mobin-b.github.io/Database/Image/Profiles/17.png" alt=""
+                            class="profile_img"></label>
+                    <label class="profile"><input type="radio" name="profile"><img
+                            src="https://mobin-b.github.io/Database/Image/Profiles/1.png" alt=""
+                            class="profile_img"></label>
+                    <label class="profile"><input type="radio" name="profile"><img
+                            src="https://mobin-b.github.io/Database/Image/Profiles/2.png" alt=""
+                            class="profile_img"></label>
+                    <label class="profile"><input type="radio" name="profile"><img
+                            src="https://mobin-b.github.io/Database/Image/Profiles/3.png" alt=""
+                            class="profile_img"></label>
+                    <label class="profile"><input type="radio" name="profile"><img
+                            src="https://mobin-b.github.io/Database/Image/Profiles/4.png" alt=""
+                            class="profile_img"></label>
+                    <label class="profile"><input type="radio" name="profile"><img
+                            src="https://mobin-b.github.io/Database/Image/Profiles/5.png" alt=""
+                            class="profile_img"></label>
+                </form>
+
+                <div id="message_data">
+                    <input type="text" minlength="3" maxlength="12" id="username" placeholder="Enter your name"
+                        autocomplete="name">
 
 
-            <textarea name="text" id="textarea" rows="4" class="moit" maxlength="140"
-                placeholder="Write what you want..." onkeyup="length_check()"></textarea>
+                    <article id="message_text">
+                        <textarea name="text" id="textarea" class="moit" maxlength="140"
+                            placeholder="Write what you want..." onkeyup="length_check()"></textarea>
 
-            <footer id="progress_footer"><progress value="0" max="140" id="progress"></progress><p id="progress_text">0/140</p></footer>
+                        <footer id="progress_footer"><progress value="0" max="140" id="progress"></progress>
+                            <p id="progress_text">0/140</p>
+                        </footer>
+                    </article>
+                </div>
+
+            </div>
 
             <button id="submit" class="not-selectable" onclick="submit()">Submit</button>
 

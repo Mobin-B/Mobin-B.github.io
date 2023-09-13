@@ -12,40 +12,48 @@
 </head>
 
 <body>
-  <header id="main" class="not-selectable">
-    <img src="../Database/Image/Logo/Moiter_White.png" alt="#" id="logo" />
-  </header>
-
-  <main id="articles">
 
 
-    <article class="main_article not-selectable">
+  <main id="container">
 
-      <header class="article_profile"><img src="../Database/Image/Profiles/1.png" alt="" class="article_avatar">
-        <h5 class="article_username">MobinBayati </h5>
-        <!-- <h5 class="article_fallow"><i class="fa-solid fa-plus"></i></h5> -->
+    <article id="left_side">
+      <header id="main" class="not-selectable">
+        <img src="../Database/Image/Logo/Moiter_White.png" alt="#" id="logo" />
       </header>
+      <main id="main_container">
+        <main id="articles">
 
-      <article class="moit">
-        <p>
-          Hello,It's there. Let's talk about good things &#128516
-          Moiter is there to make your ideas global 🌍
-        </p>
-      </article>
 
+          <article class="main_article not-selectable">
+
+            <header class="article_profile"><img src="../Database/Image/Profiles/1.png" alt="" class="article_avatar">
+              <h5 class="article_username">MobinBayati </h5>
+              <!-- <h5 class="article_fallow"><i class="fa-solid fa-plus"></i></h5> -->
+            </header>
+
+            <article class="moit">
+              <p>
+                Hello,It's there. Let's talk about good things &#128516
+                Moiter is there to make your ideas global 🌍
+              </p>
+            </article>
+
+          </article>
+
+        </main>
+
+        <footer id="load_container">
+          <button id="load-btn" onclick="load_more()">Load More</button>
+        </footer>
+      </main>
     </article>
 
+    <footer id="menu" class="not-selectable">
+      <i class="bi bi-house-door-fill menu_items" id="house"></i>
+      <i class="bi bi-chat-square-text-fill menu_items" id="chat" onclick="post()"></i>
+      <i class="bi bi-person-circle menu_items" id="profile" onclick="user()"></i>
+    </footer>
   </main>
-
-  <footer>
-    <button id="load-btn" onclick="load_more()">Load All</button>
-  </footer>
-
-  <footer id="menu" class="not-selectable">
-    <i class="bi bi-house-door-fill menu_items" id="house"></i>
-    <i class="bi bi-chat-square-text-fill menu_items" id="chat" onclick="post()"></i>
-    <i class="bi bi-person-circle menu_items" id="profile" onclick="user()"></i>
-  </footer>
 </body>
 
 </html>
