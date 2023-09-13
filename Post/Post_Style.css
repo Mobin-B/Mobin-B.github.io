@@ -284,7 +284,7 @@ progress::-moz-progress-bar {
   #profiles {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: start;
     margin: 0;
     width: 30%;
@@ -297,17 +297,15 @@ progress::-moz-progress-bar {
     transform: scale(1.03);
   }
 
-  /* .profile_img{
-    transition: 0.3s;
+  .profile_img{
+    margin: 7px 10px;
   }
-  .profile_img:hover{
-    border-radius: 35px;
-  } */
+
 
 
   [type=radio]+img.profile_img:hover {
-    border-radius: 23px;
-    transform: scale(1.17);
+    border-radius: 25px;
+    transform: scale(1.20);
   }
 
   #message_data {

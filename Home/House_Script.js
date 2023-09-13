@@ -11,8 +11,6 @@ request.onreadystatechange = function () {
     }
 }
 
-alert(JSON.stringify(file))
-
 request.open("GET", "../Database/Json/Posts.json", true);
 request.send();
 
