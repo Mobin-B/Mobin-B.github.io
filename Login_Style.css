@@ -10,28 +10,28 @@
 
 body {
     background-color: var(--main_background);
-    padding: 50% 30px;
 }
 
-article{
-    padding: 10px 30px 40px 30px;
+article {
+    padding: 30px 17px;
     display: block;
     margin: auto;
     background-color: var(--main_objects);
     border: 3px solid var(--main-objects_dark);
-    border-radius: 30px;
+    border-radius: 25px;
 }
 
-h5{
+h5 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--main_text);
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     font-size: larger;
     font-weight: 100;
     text-align: center;
+    margin: 0 0 17px 0 ;
 }
 
-input{
+input {
     display: block;
     margin: auto;
     height: 50px;
@@ -41,25 +41,29 @@ input{
     border: 3px solid var(--main_objects);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
-    border-radius: 17px;
+    border-radius: 14px;
+    box-shadow: 0px 8px 14px rgba(13, 13, 13, 0);
     transition: 0.3s;
 }
-input:focus{
+
+input:focus {
     outline: none;
     border: var(--main-objects_dark) 3px solid;
-    border-radius: 20px;
-    width: 47vw;
+    border-radius: 30px;
+    width: 50vw;
+    box-shadow: 0px 8px 14px rgba(27, 0, 70, 0.353);
 }
 
-button{
+button {
     display: block;
+    width: 30%;
     margin: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
+    font-size: larger;
     padding: 10px 12px;
     color: var(--main_text);
     border: 2px solid var(--main_text);
     background-color: var(--main-objects_dark);
-    border-radius: 14px;
-    font-weight: bold;
+    border-radius: 30px;
+    font-weight: normal;
 }

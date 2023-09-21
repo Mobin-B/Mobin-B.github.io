@@ -73,8 +73,8 @@ textarea::-webkit-scrollbar-track {
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background-color: rgba(169, 169, 169, 0);
-  outline: 1px solid rgba(112, 128, 144, 0);
+  background-color: #a9a9a900;
+  outline: 1px solid #70809000;
   border-radius: 100px;
 }
 
