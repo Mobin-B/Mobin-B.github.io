@@ -8,10 +8,25 @@
     <title>Counter</title>
 </head>
 
+<script>
+    var num = 0;
+    function add() {
+        num++;
+        document.getElementById("num").innerHTML = num;
+    }
+
+    function reset() {
+        num = 0;
+        document.getElementById("num").innerHTML = num;
+    }
+
+</script>
+
 <body>
     <article>
-        <h1>32003</h1>
-        <Button>Count</Button>
+        <h1 id="num">0</h1>
+        <Button onclick="reset()">Restart</Button>
+        <Button id="count" onclick="add()">Count</Button>
     </article>
 </body>
 

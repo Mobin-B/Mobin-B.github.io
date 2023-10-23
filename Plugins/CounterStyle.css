@@ -19,17 +19,50 @@ article {
     border-radius: 33px;
 }
 
+
 button {
+    background-color: #f97272;
+    border: 0;
+    height: 14%;
+    width: 89%;
+    margin: 0;
+    font-size: 2em;
+    color: white;
+    font-family: sans-serif;
+    font-weight: normal;
+    border-radius: 17px;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+}
+
+#count {
     background-color: #F9B572;
     border: 0;
-    height: 55%;
-    width: 87%;
+    height: 47%;
+    width: 89%;
     margin: 0;
     font-size: 4.3em;
     color: white;
     font-family: sans-serif;
     font-weight: bolder;
     border-radius: 17px;
+    letter-spacing: normal;
+    transition: 0.3s;
+}
+
+/* button:hover {
+    background-color: #f8aa5b;
+} */
+
+#count:active {
+    background-color: #f8aa5b;
+    font-size: 4.4em;
+    letter-spacing: 0.1em;
+}
+
+button:active {
+    background-color: #ff4848;
+    width: 70%;
 }
 
 h1 {
@@ -39,9 +72,15 @@ h1 {
     background-color: #748E63;
     color: white;
     padding: 0;
-    height: 35%;
-    width: 87%;
+    height: 28%;
+    width: 89%;
     margin: 0;
-    font-size: 5em;
+    font-size: 7em;
     border-radius: 17px;
+    letter-spacing: normal;
+    transition: 0.3s;
+}
+
+h1:active {
+    font-size: 7.5em;
 }
