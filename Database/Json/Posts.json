@@ -25,7 +25,37 @@
   },
   {
     "id":5,
+    "profileID": 3,
+    "username": "Artin",
+    "text": "We've combined the power of the Following feed with the For you feed so there’s one place to discover content on GitHub."
+  },
+  {
+    "id":6,
     "profileID": 5,
+    "username": "Ehsan",
+    "text": "There’s improved filtering so you can customize your feed exactly how you like it, and a shiny new visual design 🖥️"
+  },
+  {
+    "id":7,
+    "profileID": 7,
+    "username": "AmirAli",
+    "text": "Find the best answer to your technical question, help others answer theirs. Want a secure, private space for your technical knowledge?"
+  },
+  {
+    "id":8,
+    "profileID": 15,
+    "username": "Hasan",
+    "text": "A community-based space to find and contribute answers to technical challenges, and one of the most popular websites in the world."
+  },
+  {
+    "id":9,
+    "profileID": 9,
+    "username": "Mahdi",
+    "text": "If somebody somewhere has the right answer, suddenly you have it too. Collaborate better in a remote-first world."
+  },
+  {
+    "id":10,
+    "profileID": 10,
     "username": "Abbas",
     "text": "For all HTML DOM style properties, look at our complete HTML DOM Style Object Reference."
   }
