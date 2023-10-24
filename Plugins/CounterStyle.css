@@ -20,13 +20,14 @@ article {
 }
 
 
-button {
+#reset {
     background-color: #f97272;
     border: 0;
     height: 14%;
     width: 89%;
     margin: 0;
     font-size: 2em;
+    padding: 0;
     color: white;
     font-family: sans-serif;
     font-weight: normal;
@@ -41,7 +42,8 @@ button {
     height: 47%;
     width: 89%;
     margin: 0;
-    font-size: 4.3em;
+    font-size: 4em;
+    padding: 0;
     color: white;
     font-family: sans-serif;
     font-weight: bolder;
@@ -60,7 +62,7 @@ button {
     letter-spacing: 0.1em;
 }
 
-button:active {
+#reset:active {
     background-color: #ff4848;
     width: 70%;
 }
