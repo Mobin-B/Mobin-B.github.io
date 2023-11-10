@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="2048.css" />
+    <script src="2048.js"></script>
+</head>
+
+<body onload="setColorAndScore(),gameStart()" onkeydown="keyPress()">
+    <div id="main_container">
+        <header id="header">
+            <h1 id="logo">2048</h1>
+            <i class="bi bi-arrow-clockwise" id="retry" onclick="location.reload()"></i>
+            <p id="scoreLBL">SCORE</p>
+            <p id="score">2</p>
+        </header>
+        <main id="game">
+            <div class="cells" id="cell0"></div>
+            <div class="cells" id="cell1"></div>
+            <div class="cells" id="cell2"></div>
+            <div class="cells" id="cell3"></div>
+            <div class="cells" id="cell4"></div>
+            <div class="cells" id="cell5"></div>
+            <div class="cells" id="cell6"></div>
+            <div class="cells" id="cell7"></div>
+            <div class="cells" id="cell8"></div>
+            <div class="cells" id="cell9"></div>
+            <div class="cells" id="cell10"></div>
+            <div class="cells" id="cell11"></div>
+            <div class="cells" id="cell12"></div>
+            <div class="cells" id="cell13"></div>
+            <div class="cells" id="cell14"></div>
+            <div class="cells" id="cell15"></div>
+        </main>
+    </div>
+
+
+    <div id="controler">
+
+
+        <i class="bi bi-caret-left-fill controlers" onclick="pushLeft()"></i>
+
+        <div id="up_down">
+            <i class="bi bi-caret-up-fill controlers" onclick="pushUp()"></i>
+            <i class="bi bi-caret-down-fill controlers" onclick="pushDown()"></i>
+        </div>
+
+        <i class="bi bi-caret-right-fill controlers" onclick="pushRight()"></i>
+
+
+    </div>
+</body>
+
+</html>

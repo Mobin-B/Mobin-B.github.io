@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+}
+
+var {
+  background-color: #eb9e45;
+  background-color: #eb4566;
+  background-color: #ebd245;
+  background-color: #d5eb45;
+  background-color: #7ceb45;
+}
+
+@font-face {
+  font-family: JetBrains;
+  src: url(../Database/Fonts/JetBrainsMono[wght].ttf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #eaeaea;
+}
+
+#main_container {
+  display: grid;
+  height: 640px;
+  width: 500px;
+  align-items: start;
+  justify-items: center;
+  background-color: rgb(99, 214, 213);
+  border-radius: 40px;
+  border: 3px solid rgb(38, 42, 51);
+  padding: 27px 0 0 0;
+  transition: 0.3s;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 8px;
+  width: 450px;
+  height: 88px;
+  background-color: #eaeaea;
+  border-radius: 20px;
+  box-shadow: 0 8px 0 #d0d0d0;
+  transition: 0.5s;
+}
+
+#logo {
+  display: flex;
+  padding: 8px 17px;
+  margin: 0 8px 0 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(235, 69, 102);
+  color: aliceblue;
+  font-size: 3em;
+  text-align: center;
+  border-radius: 14px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  transition: 0.5s;
+}
+
+#retry {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(38, 42, 51);
+  font-size: xx-large;
+  margin: 0 8px 0 0;
+  color: #eaeaea;
+  border-radius: 14px;
+  transition: 0.5s;
+}
+
+#scoreLBL {
+  display: flex;
+  padding: 8px 14px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(154, 216, 215);
+  color: rgb(38, 42, 51);
+  font-size: 2em;
+  font-weight: 700;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 14px 0 0 14px;
+  transition: 0.5s;
+}
+
+#score {
+  display: flex;
+  padding: 8px 12px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(99, 214, 213);
+  color: rgb(38, 42, 51);
+  font-size: 2em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-radius: 0 14px 14px 0;
+  transition: 0.5s;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: rgb(38, 42, 51);
+  width: 450px;
+  height: 450px;
+  padding: 14px;
+  gap: 14px;
+  border-radius: 25px;
+  box-shadow: 0 8px 0 rgb(13, 14, 18);
+}
+
+.cells {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  color: rgb(255, 255, 255);
+  font-size: 2.35em;
+  font-family: JetBrains;
+  border-radius: 14px;
+  letter-spacing: -2.2px;
+  transition: 0.08s;
+}
+
+#controler {
+  display: none;
+}
+
+@media only screen and (max-width: 417px) {
+  #main_container {
+    display: grid;
+    height: 400px;
+    width: 330px;
+    align-items: start;
+    justify-items: center;
+    background-color: rgb(99, 214, 213);
+    border-radius: 23px;
+    border: 3px solid rgb(38, 42, 51);
+    padding: 12px 0 0 0;
+    transition: 0.3s;
+  }
+
+  #header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 5px;
+    width: 300px;
+    height: 50px;
+    background-color: #eaeaea;
+    border-radius: 12px;
+    box-shadow: 0 5px 0 #d0d0d0;
+    transition: 0.5s;
+  }
+
+  #logo {
+    display: flex;
+    padding: 8px 17px;
+    margin: 0 5px 0 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(235, 69, 102);
+    color: aliceblue;
+    font-size: 1.3em;
+    text-align: center;
+    border-radius: 7px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transition: 0.5s;
+  }
+
+  #retry {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(38, 42, 51);
+    font-size: large;
+    margin: 0 8px 0 0;
+    color: #eaeaea;
+    border-radius: 7px;
+    transition: 0.5s;
+  }
+
+  #scoreLBL {
+    display: flex;
+    padding: 8px 14px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(154, 216, 215);
+    color: rgb(38, 42, 51);
+    font-size: 1.3em;
+    font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 7px 0 0 7px;
+    transition: 0.5s;
+  }
+
+  #score {
+    display: flex;
+    padding: 8px 12px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(99, 214, 213);
+    color: rgb(38, 42, 51);
+    font-size: 1.3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 0 7px 7px 0;
+    transition: 0.5s;
+  }
+
+  #game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-color: rgb(38, 42, 51);
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 12px;
+    box-shadow: 0 5px 0 rgb(13, 14, 18);
+  }
+
+  .cells {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    color: rgb(255, 255, 255);
+    font-size: 1.7em;
+    font-family: JetBrains;
+    border-radius: 8px;
+    letter-spacing: -2.2px;
+    transition: 0.08s;
+  }
+
+  #controler {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 50%;
+    height: 140px;
+    gap: 5px;
+  }
+
+  #up_down {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .controlers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(38, 42, 51);
+    color: #eaeaea;
+    font-size: xx-large;
+    padding: 8px;
+    box-shadow: 0 8px 0 rgb(13, 14, 18);
+    border-radius: 12px;
+
+  }
+
+  .hiden {
+    visibility: hidden;
+  }
+
+}
