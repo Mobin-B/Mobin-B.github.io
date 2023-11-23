@@ -18,7 +18,7 @@ var {
 
 @font-face {
   font-family: JetBrains;
-  src: url(../Database/Fonts/JetBrainsMono[wght].ttf);
+  src: url(../../Database/Fonts/JetBrainsMono[wght].ttf);
 }
 
 body {
@@ -30,6 +30,19 @@ body {
   padding: 0;
   margin: 0;
   background-color: #eaeaea;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 #main_container {
