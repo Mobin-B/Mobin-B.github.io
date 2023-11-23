@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="XO.css" />
+    <script src="XO.js"></script>
+</head>
+
+<body>
+    <div id="main_container">
+        <header id="header">
+            <h1 id="X">0</h1>
+            <i class="bi bi-arrow-clockwise" id="retry" onclick="reset()"></i>
+            <p id="O">0</p>
+        </header>
+        <main id="game">
+            <div class="cells" id="cell0" onclick="press(0)"></div>
+            <div class="cells" id="cell1" onclick="press(1)"></div>
+            <div class="cells" id="cell2" onclick="press(2)"></div>
+            <div class="cells" id="cell3" onclick="press(3)"></div>
+            <div class="cells" id="cell4" onclick="press(4)"></div>
+            <div class="cells" id="cell5" onclick="press(5)"></div>
+            <div class="cells" id="cell6" onclick="press(6)"></div>
+            <div class="cells" id="cell7" onclick="press(7)"></div>
+            <div class="cells" id="cell8" onclick="press(8)"></div>
+        </main>
+    </div>
+</body>
+
+</html>

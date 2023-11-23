@@ -20,6 +20,24 @@ function setColorAndScore() {
         else if (cells[cell].innerHTML == 32) {
             cells[cell].style.backgroundColor = "#7ceb45";
         }
+        else if (cells[cell].innerHTML == 64) {
+            cells[cell].style.backgroundColor = "#45eb8d";
+        }
+        else if (cells[cell].innerHTML == 128) {
+            cells[cell].style.backgroundColor = "#45c7eb";
+        }
+        else if (cells[cell].innerHTML == 256) {
+            cells[cell].style.backgroundColor = "#455eeb";
+        }
+        else if (cells[cell].innerHTML == 512) {
+            cells[cell].style.backgroundColor = "#7f45eb";
+        }
+        else if (cells[cell].innerHTML == 1024) {
+            cells[cell].style.backgroundColor = "#cc45eb";
+        }
+        else if (cells[cell].innerHTML == 2048) {
+            cells[cell].style.backgroundColor = "#eb4585";
+        }
         else {
             cells[cell].style.backgroundColor = "#eaeaea";
         }
