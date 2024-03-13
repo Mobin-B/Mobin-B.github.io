@@ -1,9 +1,15 @@
+@font-face {
+    font-family: Madimi;
+    src: url("../Font/MadimiOne-Regular.ttf");
+}
+
+
 body {
     -webkit-user-select: none;
     user-select: none;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100dvh;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -18,14 +24,16 @@ body {
     position: absolute;
     align-self: center;
     justify-self: center;
-    height: 100%;
-    width: 100%;
-    background-image: url("../Object/Halftone.png");
+    height: 100dvh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url("../Object/Halftone.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     pointer-events: none;
-    opacity: 0.08;
+    opacity: 0.05;
     z-index: 500;
 }
 
@@ -68,11 +76,11 @@ body {
 }
 
 .coinRedCatched {
-    transform: translateY(30vh);
+    transform: translateY(30dvh);
 }
 
 .coinBlueCatched {
-    transform: translateY(-30vh);
+    transform: translateY(-30dvh);
 }
 
 #wrong {
@@ -88,49 +96,49 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 13vh;
+    gap: 13dvh;
 }
 
 .button {
-    width: 0vh;
     display: flex;
     flex-grow: 1;
-    margin: 2vh;
+    margin: 2dvh;
     align-items: center;
     justify-content: center;
-    border: 0.6vh solid black;
+    border: 0.6dvh solid black;
     background-color: #FFB000;
-    border-radius: 3vh;
+    border-radius: 3dvh;
     z-index: 1;
 }
 
 .button:nth-child(1) {
-    box-shadow: inset 1vh 1vh 0px 0px #FF9D00;
+    box-shadow: inset 1dvh 1dvh 0px 0px #FF9D00;
 }
 
 .button:nth-child(2) {
-    box-shadow: inset -1vh -1vh 0px 0px #FF9D00;
+    box-shadow: inset -1dvh -1dvh 0px 0px #FF9D00;
 }
 
-#red .button div {
+#red .button button {
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    border-radius: 1.5vh;
+    height: 85%;
+    border-radius: 1.5dvh;
     background-color: #FF4065;
-    margin: 2vh;
-    border: 0.6vh solid #000000;
-    box-shadow: inset -1vh -1vh 0px 0vh #CC0027;
+    margin: 2dvh;
+    border: 0.6dvh solid #000000;
+    box-shadow: inset -1dvh -1dvh 0px 0dvh #CC0027;
+    outline: none;
 }
 
-#blue .button div {
+#blue .button button {
     width: -webkit-fill-available;
-    height: -webkit-fill-available;
-    border-radius: 1.5vh;
+    height: 85%;
+    border-radius: 1.5dvh;
     background-color: #40B3FF;
-    margin: 2vh;
-    border: 0.6vh solid #000000;
-    box-shadow: inset 1vh 1vh 0px 0vh #007BCC;
-
+    margin: 2dvh;
+    border: 0.6dvh solid #000000;
+    box-shadow: inset 1dvh 1dvh 0px 0dvh #007BCC;
+    outline: none;
 }
 
 #red .hand {
@@ -138,7 +146,7 @@ body {
     height: 63%;
     position: absolute;
     bottom: 0;
-    transform: translateY(30vh);
+    transform: translateY(30dvh);
     transition: 0.14s;
     pointer-events: none;
     z-index: 3;
@@ -146,7 +154,7 @@ body {
 
 #blue .hand {
     rotate: 180deg;
-    transform: translateY(30vh);
+    transform: translateY(30dvh);
     flex-grow: 1;
     height: 63%;
     position: absolute;
@@ -171,7 +179,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 2vh;
+    width: 2dvh;
     visibility: hidden;
     z-index: -30;
 }
@@ -184,18 +192,17 @@ h5 {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-weight: normal;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 4vh;
+    font-family: Madimi;
+    font-size: 5dvh;
     position: relative;
-    left: 4.3vh;
-    top: -2vh;
+    left: 3.8dvh;
+    top: -2dvh;
 }
 
 .blue h5 {
     rotate: 180deg;
-    left: -3.8vh;
-    top: 2vh;
+    left: -3.8dvh;
+    top: 2dvh;
 }
 
 .red.bag {
