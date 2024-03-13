@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CatchMoney.css">
+    <script src="CatchMoney.js"></script>
+    <title>Catch Money</title>
+</head>
+
+<body onload="gameStart()">
+    <div id="halftone"></div>
+
+    <div id="blue" class="player">
+        <div class="button">
+            <div id="blueBtn" onclick=""></div>
+        </div>
+        <img src="../Object/Hand Blu.svg" alt="BluePlayer" class="hand">
+    </div>
+    <div id="coin">
+        <div class="score red">
+            <h5 id="redPoint">0$</h5>
+            <img src="../Object/Red Bag.svg" alt="RedBag" class="bag red">
+        </div>
+        <img src="../Object/BlueWin.svg" alt="BlueWin" id="blueWinLable">
+        <img src="../Object/RedWin.svg" alt="RedWin" id="redWinLable">
+        <img src="../Object/CountDown/3.svg" alt="CountDown" id="countDown">
+        <img src="../Object/Money/Coin1.svg" alt="Coin" id="coinImage" class="">
+        <img src="../Object/Wrong.svg" alt="Wrong" id="wrong">
+        <div class="score blue">
+            <img src="../Object/Blue Bag.svg" alt="BlueBag" class="bag blue">
+            <h5 id="bluePoint">0$</h5>
+        </div>
+    </div>
+    <div id="red" class="player">
+        <img src="../Object/Hand Red.svg" alt="RedPlayer" class="hand">
+        <div class="button">
+            <div id="redBtn" onclick=""></div>
+        </div>
+    </div>
+</body>
+
+</html>

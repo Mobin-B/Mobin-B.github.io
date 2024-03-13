@@ -1,0 +1,213 @@
+body {
+    -webkit-user-select: none;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFE9D0;
+    background-image: url("../Object/Background.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#halftone {
+    position: absolute;
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+    background-image: url("../Object/Halftone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    opacity: 0.08;
+    z-index: 500;
+}
+
+#redWinLable {
+    visibility: hidden;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    z-index: 300;
+    height: 40%;
+}
+
+#blueWinLable {
+    visibility: hidden;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    z-index: 300;
+    height: 40%;
+    rotate: 180deg;
+}
+
+#countDown {
+    height: 40%;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    z-index: 5;
+}
+
+#coin {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    z-index: -100;
+}
+
+#coinImage {
+    transition: 0.14s;
+}
+
+.coinRedCatched {
+    transform: translateY(30vh);
+}
+
+.coinBlueCatched {
+    transform: translateY(-30vh);
+}
+
+#wrong {
+    visibility: hidden;
+    height: 40%;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+}
+
+.player {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 13vh;
+}
+
+.button {
+    width: 0vh;
+    display: flex;
+    flex-grow: 1;
+    margin: 2vh;
+    align-items: center;
+    justify-content: center;
+    border: 0.6vh solid black;
+    background-color: #FFB000;
+    border-radius: 3vh;
+    z-index: 1;
+}
+
+.button:nth-child(1) {
+    box-shadow: inset 1vh 1vh 0px 0px #FF9D00;
+}
+
+.button:nth-child(2) {
+    box-shadow: inset -1vh -1vh 0px 0px #FF9D00;
+}
+
+#red .button div {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-radius: 1.5vh;
+    background-color: #FF4065;
+    margin: 2vh;
+    border: 0.6vh solid #000000;
+    box-shadow: inset -1vh -1vh 0px 0vh #CC0027;
+}
+
+#blue .button div {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-radius: 1.5vh;
+    background-color: #40B3FF;
+    margin: 2vh;
+    border: 0.6vh solid #000000;
+    box-shadow: inset 1vh 1vh 0px 0vh #007BCC;
+
+}
+
+#red .hand {
+    flex-grow: 1;
+    height: 63%;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(30vh);
+    transition: 0.14s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+#blue .hand {
+    rotate: 180deg;
+    transform: translateY(30vh);
+    flex-grow: 1;
+    height: 63%;
+    position: absolute;
+    top: 0;
+    transition: 0.14s;
+    pointer-events: none;
+    z-index: 3;
+}
+
+#red .catch {
+    transform: translateY(0);
+}
+
+#blue .catch {
+    transform: translateY(0);
+}
+
+
+.score {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 2vh;
+    visibility: hidden;
+    z-index: -30;
+}
+
+.blue.score {
+    justify-content: flex-end;
+}
+
+h5 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: normal;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vh;
+    position: relative;
+    left: 4.3vh;
+    top: -2vh;
+}
+
+.blue h5 {
+    rotate: 180deg;
+    left: -3.8vh;
+    top: 2vh;
+}
+
+.red.bag {
+    height: 10.5%;
+    rotate: 90deg;
+    position: absolute;
+    z-index: -1;
+}
+
+.blue.bag {
+    rotate: -90deg;
+    height: 10.5%;
+    position: absolute;
+    z-index: -1;
+}
