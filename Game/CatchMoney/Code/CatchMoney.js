@@ -24,8 +24,8 @@ function gameStart() {
     setTimeout(function () {
         counter.style.visibility = "hidden";
 
-        document.getElementById("redBtn").addEventListener("click", catchMoneyRed);
-        document.getElementById("blueBtn").addEventListener("click", catchMoneyBlue);
+        document.getElementById("redBtn").addEventListener("touchstart", catchMoneyRed);
+        document.getElementById("blueBtn").addEventListener("touchstart", catchMoneyBlue);
 
         document.addEventListener("keypress", keypress);
         function keypress(key) {
@@ -50,25 +50,25 @@ function gameStart() {
 
 function changeCoin() {
 
-    let redWinLable = document.getElementById("redWinLable");
-    let blueWinLable = document.getElementById("blueWinLable");
+    let redWinLabel = document.getElementById("redWinLabel");
+    let blueWinLabel = document.getElementById("blueWinLabel");
 
     let bags = document.getElementsByClassName("score");
 
     if (redMoney == 8) {
-        document.getElementById("redBtn").removeEventListener("click", catchMoneyRed);
-        document.getElementById("blueBtn").removeEventListener("click", catchMoneyBlue);
+        document.getElementById("redBtn").removeEventListener("touchstart", catchMoneyRed);
+        document.getElementById("blueBtn").removeEventListener("touchstart", catchMoneyBlue);
         bags[0].style.visibility = "hidden";
         bags[1].style.visibility = "hidden";
-        redWinLable.style.visibility = "visible";
+        redWinLabel.style.visibility = "visible";
         clearInterval(coinChanger);
         return;
     } else if (blueMoney == 8) {
-        document.getElementById("redBtn").removeEventListener("click", catchMoneyRed);
-        document.getElementById("blueBtn").removeEventListener("click", catchMoneyBlue);
+        document.getElementById("redBtn").removeEventListener("touchstart", catchMoneyRed);
+        document.getElementById("blueBtn").removeEventListener("touchstart", catchMoneyBlue);
         bags[0].style.visibility = "hidden";
         bags[1].style.visibility = "hidden";
-        blueWinLable.style.visibility = "visible";
+        blueWinLabel.style.visibility = "visible";
         clearInterval(coinChanger);
         return;
     }
