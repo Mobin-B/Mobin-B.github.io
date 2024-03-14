@@ -23,17 +23,19 @@ function gameStart() {
     }, 2000);
     setTimeout(function () {
         counter.style.visibility = "hidden";
-        document.getElementById("redBtn").setAttribute("onclick", "catchMoneyRed()");
-        document.getElementById("blueBtn").setAttribute("onclick", "catchMoneyBlue()");
 
-        document.addEventListener("keypress", function keypress(key) {
+        document.getElementById("redBtn").addEventListener("click", catchMoneyRed);
+        document.getElementById("blueBtn").addEventListener("click", catchMoneyBlue);
+
+        document.addEventListener("keypress", keypress);
+        function keypress(key) {
             if (key.key == "s" || key.key == "S") {
                 catchMoneyRed();
             }
             else if (key.key == "l" || key.key == "L") {
                 catchMoneyBlue();
             }
-        });
+        }
 
         bags[0].style.visibility = "visible";
         bags[1].style.visibility = "visible";
@@ -54,16 +56,16 @@ function changeCoin() {
     let bags = document.getElementsByClassName("score");
 
     if (redMoney == 8) {
-        document.getElementById("redBtn").setAttribute("onclick", "");
-        document.getElementById("blueBtn").setAttribute("onclick", "");
+        document.getElementById("redBtn").removeEventListener("click", catchMoneyRed);
+        document.getElementById("blueBtn").removeEventListener("click", catchMoneyBlue);
         bags[0].style.visibility = "hidden";
         bags[1].style.visibility = "hidden";
         redWinLable.style.visibility = "visible";
         clearInterval(coinChanger);
         return;
     } else if (blueMoney == 8) {
-        document.getElementById("blueBtn").setAttribute("onclick", "");
-        document.getElementById("redBtn").setAttribute("onclick", "");
+        document.getElementById("redBtn").removeEventListener("click", catchMoneyRed);
+        document.getElementById("blueBtn").removeEventListener("click", catchMoneyBlue);
         bags[0].style.visibility = "hidden";
         bags[1].style.visibility = "hidden";
         blueWinLable.style.visibility = "visible";
@@ -106,11 +108,9 @@ function catchMoneyRed() {
     }
 
     redHand.classList.add("catch");
-    redBtn.setAttribute("onclick", "");
 
     if (bluePosition == false && coinExist == true && coinOrTrash == true) {
         setTimeout(function () {
-
             redHand.classList.remove("catch");
             coin.classList.add("coinRedCatched");
             redMoney++;
@@ -123,7 +123,6 @@ function catchMoneyRed() {
         setTimeout(function () {
             redHand.style.zIndex = "3";
             coin.classList.remove("coinRedCatched");
-            redBtn.setAttribute("onclick", "catchMoneyRed()");
         }, 750);
     }
 
@@ -131,16 +130,21 @@ function catchMoneyRed() {
         setTimeout(function () {
             wrongEffect.style.visibility = "visible";
             document.body.style.transform = "rotate(2deg) scale(1.02)";
-            navigator.vibrate(300);
+            if (navigator.vibrate) {
+                navigator.vibrate(300);
+            }
         }, 140);
         setTimeout(function () {
+            if (redMoney > 0) {
+                redMoney--;
+                redBag.innerHTML = redMoney + "$";
+            }
             wrongEffect.style.visibility = "hidden";
             document.body.style.transform = "rotate(0) scale(1)";
             redHand.classList.remove("catch");
         }, 300);
         setTimeout(function () {
             redHand.style.zIndex = "3";
-            redBtn.setAttribute("onclick", "catchMoneyRed()");
         }, 750);
     }
 
@@ -150,7 +154,6 @@ function catchMoneyRed() {
         }, 300);
         setTimeout(function () {
             redHand.style.zIndex = "3";
-            redBtn.setAttribute("onclick", "catchMoneyRed()");
         }, 750);
     }
 
@@ -174,11 +177,9 @@ function catchMoneyBlue() {
     }
 
     blueHand.classList.add("catch");
-    blueBtn.setAttribute("onclick", "");
 
     if (redPosition == false && coinExist == true && coinOrTrash == true) {
         setTimeout(function () {
-
             blueHand.classList.remove("catch");
             coin.classList.add("coinBlueCatched");
             blueMoney++;
@@ -191,7 +192,6 @@ function catchMoneyBlue() {
         setTimeout(function () {
             blueHand.style.zIndex = "3";
             coin.classList.remove("coinBlueCatched");
-            blueBtn.setAttribute("onclick", "catchMoneyBlue()");
         }, 750);
     }
 
@@ -199,16 +199,21 @@ function catchMoneyBlue() {
         setTimeout(function () {
             wrongEffect.style.visibility = "visible";
             document.body.style.transform = "rotate(-2deg) scale(1.02)";
-            navigator.vibrate(300);
+            if (navigator.vibrate) {
+                navigator.vibrate(300);
+            }
         }, 140);
         setTimeout(function () {
+            if (blueMoney > 0) {
+                blueMoney--;
+                blueBag.innerHTML = blueMoney + "$";
+            }
             wrongEffect.style.visibility = "hidden";
             document.body.style.transform = "rotate(0) scale(1)";
             blueHand.classList.remove("catch");
         }, 300);
         setTimeout(function () {
             blueHand.style.zIndex = "3";
-            blueBtn.setAttribute("onclick", "catchMoneyBlue()");
         }, 750);
     }
 
@@ -218,7 +223,6 @@ function catchMoneyBlue() {
         }, 300);
         setTimeout(function () {
             blueHand.style.zIndex = "3";
-            blueBtn.setAttribute("onclick", "catchMoneyBlue()");
         }, 750);
     }
 

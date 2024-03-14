@@ -119,9 +119,9 @@ body {
     box-shadow: inset -1dvh -1dvh 0px 0px #FF9D00;
 }
 
-#red .button button {
+#red .button div {
     width: -webkit-fill-available;
-    height: 85%;
+    height: 80%;
     border-radius: 1.5dvh;
     background-color: #FF4065;
     margin: 2dvh;
@@ -130,9 +130,9 @@ body {
     outline: none;
 }
 
-#blue .button button {
+#blue .button div {
     width: -webkit-fill-available;
-    height: 85%;
+    height: 80%;
     border-radius: 1.5dvh;
     background-color: #40B3FF;
     margin: 2dvh;
