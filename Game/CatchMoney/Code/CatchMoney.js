@@ -50,6 +50,11 @@ function gameStart() {
 
 function changeCoin() {
 
+    coinExist = true;
+    redPosition = false;
+    bluePosition = false;
+
+
     let redWinLabel = document.getElementById("redWinLabel");
     let blueWinLabel = document.getElementById("blueWinLabel");
 
@@ -73,9 +78,7 @@ function changeCoin() {
         return;
     }
 
-    coinExist = true;
-    redPosition = false;
-    bluePosition = false;
+
 
     let num = Math.floor(Math.random() * 6) + 1;
     let coin = document.getElementById("coinImage");
@@ -93,13 +96,13 @@ function changeCoin() {
 
 function catchMoneyRed() {
 
+    redPosition = true;
+
     let redHand = document.querySelector("#red .hand");
     let coin = document.getElementById("coinImage");
     let redBag = document.getElementById("redPoint");
-    let redBtn = document.getElementById("redBtn");
     let wrongEffect = document.getElementById("wrong");
 
-    redPosition = true;
 
     if (bluePosition == false) {
         redHand.style.zIndex = "2";
@@ -162,13 +165,13 @@ function catchMoneyRed() {
 
 function catchMoneyBlue() {
 
+    bluePosition = true;
+
     let blueHand = document.querySelector("#blue .hand");
     let coin = document.getElementById("coinImage");
     let blueBag = document.getElementById("bluePoint");
-    let blueBtn = document.getElementById("blueBtn");
     let wrongEffect = document.getElementById("wrong");
 
-    bluePosition = true;
 
     if (redPosition == false) {
         blueHand.style.zIndex = "2";
