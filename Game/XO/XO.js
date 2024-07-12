@@ -65,8 +65,6 @@ function checkWin() {
 
         document.getElementById("header").style.gridTemplateColumns = "1fr 1fr 1fr";
         document.getElementById("retry").style.display = "flex";
-        document.getElementById("X").style.fontSize = "3.5rem";
-        document.getElementById("O").style.fontSize = "3.5rem";
 
     }
 
@@ -78,7 +76,7 @@ function checkWin() {
         (cellsNum[4] != 0 && cellsNum[3] == 2 && cellsNum[4] == 2 && cellsNum[5] == 2) ||
         (cellsNum[4] != 0 && cellsNum[2] == 2 && cellsNum[4] == 2 && cellsNum[6] == 2) ||
         (cellsNum[8] != 0 && cellsNum[2] == 2 && cellsNum[5] == 2 && cellsNum[8] == 2) ||
-        (cellsNum[8] != 0 && cellsNum[6] == 2 && cellsNum[7] == 2 && cells[8] == 2)
+        (cellsNum[8] != 0 && cellsNum[6] == 2 && cellsNum[7] == 2 && cellsNum[8] == 2)
     ) {
         blueScore += 1;
 
@@ -89,8 +87,6 @@ function checkWin() {
 
         document.getElementById("header").style.gridTemplateColumns = "1fr 1fr 1fr";
         document.getElementById("retry").style.display = "flex";
-        document.getElementById("X").style.fontSize = "3.5rem";
-        document.getElementById("O").style.fontSize = "3.5rem";
 
     }
 
@@ -108,8 +104,6 @@ function checkWin() {
 
         document.getElementById("header").style.gridTemplateColumns = "1fr 1fr 1fr";
         document.getElementById("retry").style.display = "flex";
-        document.getElementById("X").style.fontSize = "3.5rem";
-        document.getElementById("O").style.fontSize = "3.5rem";
 
     }
 }

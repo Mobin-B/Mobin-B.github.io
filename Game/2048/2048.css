@@ -51,9 +51,9 @@ body {
   width: 500px;
   align-items: start;
   justify-items: center;
-  background-color: rgb(99, 214, 213);
+  background-color: rgb(65, 69, 80);
   border-radius: 40px;
-  border: 3px solid rgb(38, 42, 51);
+  border: 3px solid rgb(42, 45, 52);
   padding: 27px 0 0 0;
   transition: 0.3s;
 }
@@ -76,7 +76,7 @@ body {
   margin: 0 8px 0 0;
   align-items: center;
   justify-content: center;
-  background-color: rgb(235, 69, 102);
+  background-color: #eb4566;
   color: aliceblue;
   font-size: 3em;
   text-align: center;
@@ -118,7 +118,7 @@ body {
   margin: 0;
   align-items: center;
   justify-content: center;
-  background-color: rgb(99, 214, 213);
+  background-color: #63d6d5;
   color: rgb(38, 42, 51);
   font-size: 2em;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

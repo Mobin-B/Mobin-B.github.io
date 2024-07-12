@@ -24,94 +24,27 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
     padding: 30px 17px;
     border-radius: 25px;
     gap: 17px;
     transition: 0.7s;
 }
 
-.card {
-    display: grid;
-    height: 35vw;
-    grid-template-columns: 1fr 1fr;
-    background-color: #5B9A8B;
-    border: 5px solid #F7E987;
-    overflow: hidden;
-    place-content: center;
-    place-items: center;
-    border-radius: 25px;
-    gap: 5px;
-    box-shadow: 0px 0 14px 3px hsl(51.5deg 88.98% 75.1% / 30%);
-    transition: 0.7s;
+img {
+    width: 70dvh;
 }
 
-.img {
-    max-width: 43vw;
-    border-radius: 0 0 0 50px;
-    border-left: 5px solid #252B48;
-    transition: 0.7s;
-}
-
-h1 {
-    display: flex;
-    margin: 0 8px 0 8px;
-    padding: 0;
-    font-family: JetBrains;
-    color: white;
-    font-size: 2rem;
-    font-weight: bolder;
-    transition: 0.7s;
-}
-
-#game2048 {
-    background-color: rgb(235, 69, 102);
-    border: 5px solid rgb(99, 214, 213);
-    box-shadow: 0px 0 14px 3px hsl(179.47deg 58.16% 61.57% / 30%);
-}
-
-#header2048 {
-    font-size: 2.3rem;
-}
-
-#XOgame {
-    background-color: #00B8A9;
-    border: 5px solid #F6416C;
-    box-shadow: 0px 0 14px 3px rgb(246 65 108 / 30%);
-}
-
-#XOheader {
-    font-size: 2.3rem;
-}
-
-
-@media only screen and (min-width: 636px) {
+@media screen and (min-width: 1024px) {
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 30px 17px;
-        border-radius: 25px;
-        gap: 17px;
+        height: 100dvh;
     }
 
-    .card {
-        grid-template-columns: 2fr 1fr;
-        height: auto;
-    }
-
-    .card:hover {
-        transform: translateY(-2px);
-    }
-
-    .card:hover h1 {
-        transform: translateY(-5px);
-    }
-
-    .card:hover img {
-        border-radius: 0 0 0 30px;
-    }
-
-    .img {
-        max-width: 20vw;
+    img:hover {
+        transform: scale(1.05) rotate(3deg);
+        transition: 500ms;
     }
 }

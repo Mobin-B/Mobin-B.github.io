@@ -5,25 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Login_Style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="Login_Script.js"></script>
     <title>Moiter</title>
 </head>
 
 <body>
-    <main>
-        <article id="moiter" class="card" onclick="moiter()">
-            <h1>Moiter</h1>
-            <img src="Database/Image/Template/MoiterHeader.jpeg" alt="" class="img">
-        </article>
-        <article id="game2048" class="card" onclick="game2048()">
-            <h1 id="header2048">2048</h1>
-            <img src="Database/Image/Template/2048Header.jpeg" alt="" class="img">
-        </article>
-        <article id="XOgame" class="card" onclick="XO()">
-            <h1 id="XOheader">XO</h1>
-            <img src="Database/Image/Template/XOheader.jpeg" alt="" class="img">
-        </article>
-
+    <main id="container">
+        <img src="PagesLabel/Moiter.svg" alt="Moiter" onclick="pages(1)">
+        <img src="PagesLabel/XO.svg" alt="XO" onclick="pages(2)">
+        <img src="PagesLabel/2048.svg" alt="2084" onclick="pages(3)">
+        <img src="PagesLabel/CatchMoney.svg" alt="CatchMoney" onclick="pages(4)">
     </main>
 </body>
 

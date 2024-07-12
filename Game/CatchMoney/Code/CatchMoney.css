@@ -20,23 +20,6 @@ body {
     background-size: cover;
 }
 
-#halftone {
-    position: absolute;
-    align-self: center;
-    justify-self: center;
-    height: 100dvh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    background-image: url("../Object/Halftone.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    pointer-events: none;
-    opacity: 0.05;
-    z-index: 500;
-}
-
 #redWinLabel {
     visibility: hidden;
     position: absolute;
