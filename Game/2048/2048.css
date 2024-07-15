@@ -163,9 +163,9 @@ body {
     width: 330px;
     align-items: start;
     justify-items: center;
-    background-color: rgb(99, 214, 213);
+    background-color: rgb(65, 69, 80);
     border-radius: 23px;
-    border: 3px solid rgb(38, 42, 51);
+    border: 3px solid rgb(42, 45, 52);
     padding: 12px 0 0 0;
     transition: 0.3s;
   }

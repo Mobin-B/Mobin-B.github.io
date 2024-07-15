@@ -120,12 +120,16 @@ function checkGameLose() {
         }
     }
 
-    if (i == 16) {
+    if (i == 16 && screen.width > 417) {
         document.getElementById("logo").innerHTML = "GAMEOVER";
         document.getElementById("logo").style.fontSize = "2em";
         document.getElementById("retry").style.display = "flex";
         document.getElementById("header").style.gridTemplateColumns = "2fr 0.75fr 1fr 1fr";
-        document.getElementById("main_container").style.backgroundColor = "#696969"
+    }
+    else if (i == 16 && screen.width <= 417) {
+        document.getElementById("logo").innerHTML = "GAMEOVER";
+        document.getElementById("retry").style.display = "flex";
+        document.getElementById("header").style.gridTemplateColumns = "2fr 0.75fr 1fr 1fr";
     }
 }
 
@@ -156,186 +160,256 @@ function keyPress(e) {
 }
 
 function pushDown() {
-    let j;
-    for (let i = 11; i >= 0; i--) {
-        for (j = i + 4; j <= 15 && cells[j].innerHTML == ""; j += 4);
-        if (j - 4 != i && cells[i].innerHTML != "") {
-            cells[i].style.transform = "translateY(8px) scaleY(1.05)";
-            cells[j - 4].innerHTML = cells[i].innerHTML;
-            cells[i].innerHTML = "";
+    checkAllCells = false;
+    for (let cellPos = 0; cellPos <= 15; cellPos++) {
+        if (cells[cellPos].innerHTML == "") {
+            checkAllCells = true;
+        }
+    }
+    if (checkAllCells == false) {
+        for (let cellPos = 0; cellPos <= 11; cellPos++) {
+            if (cells[cellPos].innerHTML == cells[cellPos + 4].innerHTML) {
+                checkAllCells = true;
+            }
         }
     }
 
-    for (let i = 11; i >= 0; i--) {
-        j = i + 4;
-        if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
-            cells[i].style.transform = "translateY(8px)";
-            cells[j].innerHTML = cells[i].innerHTML * 2;
-            cells[i].innerHTML = "";
-            cells[j].style.transform = "scale(1.12)"
+    if (checkAllCells == true) {
+        let j;
+        for (let i = 11; i >= 0; i--) {
+            for (j = i + 4; j <= 15 && cells[j].innerHTML == ""; j += 4);
+            if (j - 4 != i && cells[i].innerHTML != "") {
+                cells[i].style.transform = "translateY(8px) scaleY(1.05)";
+                cells[j - 4].innerHTML = cells[i].innerHTML;
+                cells[i].innerHTML = "";
+            }
         }
 
+        for (let i = 11; i >= 0; i--) {
+            j = i + 4;
+            if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
+                cells[i].style.transform = "translateY(8px)";
+                cells[j].innerHTML = cells[i].innerHTML * 2;
+                cells[i].innerHTML = "";
+                cells[j].style.transform = "scale(1.12)"
+            }
+
+        }
+
+        for (let i = 11; i >= 0; i--) {
+            for (j = i + 4; j <= 15 && cells[j].innerHTML == ""; j += 4);
+            if (j - 4 != i && cells[i].innerHTML != "") {
+                cells[j - 4].innerHTML = cells[i].innerHTML;
+                cells[i].innerHTML = "";
+            }
+        }
+
+        setTimeout(function () {
+            for (let i = 0; i <= 15; i++) {
+                cells[i].style.transform = "translateY(0)";
+            }
+        }, 100)
+
+        setColorAndScore();
+        addNum();
+        checkGameLose();
     }
-
-    for (let i = 11; i >= 0; i--) {
-        for (j = i + 4; j <= 15 && cells[j].innerHTML == ""; j += 4);
-        if (j - 4 != i && cells[i].innerHTML != "") {
-            cells[j - 4].innerHTML = cells[i].innerHTML;
-            cells[i].innerHTML = "";
-        }
-    }
-
-    setTimeout(function () {
-        for (let i = 0; i <= 15; i++) {
-            cells[i].style.transform = "translateY(0)";
-        }
-    }, 100)
-
-    setColorAndScore();
-    addNum();
-    checkGameLose();
 }
 
 function pushUp() {
-    let j;
-    for (let i = 4; i <= 15; i++) {
-        for (j = i - 4; j >= 0 && cells[j].innerHTML == ""; j -= 4);
-
-        if (j + 4 != i && cells[i].innerHTML != "") {
-            cells[i].style.transform = "translateY(-8px) scaleY(1.05)";
-            cells[j + 4].innerHTML = cells[i].innerHTML;
-            cells[i].innerHTML = "";
+    checkAllCells = false;
+    for (let cellPos = 0; cellPos <= 15; cellPos++) {
+        if (cells[cellPos].innerHTML == "") {
+            checkAllCells = true;
+        }
+    }
+    if (checkAllCells == false) {
+        for (let cellPos = 4; cellPos <= 15; cellPos++) {
+            if (cells[cellPos].innerHTML == cells[cellPos - 4].innerHTML) {
+                checkAllCells = true;
+            }
         }
     }
 
-    for (let i = 4; i <= 15; i++) {
-        j = i - 4;
-        if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
-            cells[i].style.transform = "translateY(-8px)";
-            cells[j].innerHTML = cells[i].innerHTML * 2;
-            cells[i].innerHTML = "";
-            cells[j].style.transform = "scale(1.12)"
+    if (checkAllCells == true) {
+        let j;
+        for (let i = 4; i <= 15; i++) {
+            for (j = i - 4; j >= 0 && cells[j].innerHTML == ""; j -= 4);
+
+            if (j + 4 != i && cells[i].innerHTML != "") {
+                cells[i].style.transform = "translateY(-8px) scaleY(1.05)";
+                cells[j + 4].innerHTML = cells[i].innerHTML;
+                cells[i].innerHTML = "";
+            }
         }
 
+        for (let i = 4; i <= 15; i++) {
+            j = i - 4;
+            if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
+                cells[i].style.transform = "translateY(-8px)";
+                cells[j].innerHTML = cells[i].innerHTML * 2;
+                cells[i].innerHTML = "";
+                cells[j].style.transform = "scale(1.12)"
+            }
+
+        }
+
+        for (let i = 4; i <= 15; i++) {
+            for (j = i - 4; j >= 0 && cells[j].innerHTML == ""; j -= 4);
+            if (j + 4 != i && cells[i].innerHTML != "") {
+                cells[j + 4].innerHTML = cells[i].innerHTML;
+                cells[i].innerHTML = "";
+            }
+        }
+
+        setTimeout(function () {
+            for (let i = 0; i <= 15; i++) {
+                cells[i].style.transform = "translateY(0)";
+            }
+        }, 100)
+
+        setColorAndScore();
+        addNum();
+        checkGameLose();
     }
-
-    for (let i = 4; i <= 15; i++) {
-        for (j = i - 4; j >= 0 && cells[j].innerHTML == ""; j -= 4);
-        if (j + 4 != i && cells[i].innerHTML != "") {
-            cells[j + 4].innerHTML = cells[i].innerHTML;
-            cells[i].innerHTML = "";
-        }
-    }
-
-    setTimeout(function () {
-        for (let i = 0; i <= 15; i++) {
-            cells[i].style.transform = "translateY(0)";
-        }
-    }, 100)
-
-    setColorAndScore();
-    addNum();
-    checkGameLose();
 }
 
 function pushRight() {
-    let j;
-    let rightColumn = [11, 7, 3];
-
-    for (let i = 14; i >= 0; i--) {
-        if (rightColumn.includes(i)) { continue } //Skip right column
-        else {
-            for (j = i + 1; j <= 15 && cells[j].innerHTML == "" && !(rightColumn.includes(j - 1)); j++);
-
-            if (j - 1 != i && cells[i].innerHTML != "") {
-                cells[i].style.transform = "translateX(8px) scaleX(1.05)";
-                cells[j - 1].innerHTML = cells[i].innerHTML;
-                cells[i].innerHTML = "";
+    checkAllCells = false;
+    for (let cellPos = 0; cellPos <= 15; cellPos++) {
+        if (cells[cellPos].innerHTML == "") {
+            checkAllCells = true;
+        }
+    }
+    if (checkAllCells == false) {
+        for (let cellPos = 0; cellPos <= 15; cellPos++) {
+            if (cellPos % 4 == 3) {
+                continue;
+            }
+            if (cells[cellPos].innerHTML == cells[cellPos + 1].innerHTML) {
+                checkAllCells = true;
             }
         }
     }
 
-    for (let i = 14; i >= 0; i--) {
-        j = i + 1;
-        if (rightColumn.includes(i)) { continue }
-        else if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
-            cells[i].style.transform = "translateX(8px)";
-            cells[j].innerHTML = cells[i].innerHTML * 2;
-            cells[i].innerHTML = "";
-            cells[j].style.transform = "scale(1.12)"
-        }
-    }
+    if (checkAllCells == true) {
+        let j;
+        let rightColumn = [11, 7, 3];
 
-    for (let i = 14; i >= 0; i--) {
-        if (rightColumn.includes(i)) { continue } //Skip right column
-        else {
-            for (j = i + 1; j <= 15 && cells[j].innerHTML == "" && !(rightColumn.includes(j - 1)); j++);
+        for (let i = 14; i >= 0; i--) {
+            if (rightColumn.includes(i)) { continue } //Skip right column
+            else {
+                for (j = i + 1; j <= 15 && cells[j].innerHTML == "" && !(rightColumn.includes(j - 1)); j++);
 
-            if (j - 1 != i && cells[i].innerHTML != "") {
-                cells[j - 1].innerHTML = cells[i].innerHTML;
-                cells[i].innerHTML = "";
+                if (j - 1 != i && cells[i].innerHTML != "") {
+                    cells[i].style.transform = "translateX(8px) scaleX(1.05)";
+                    cells[j - 1].innerHTML = cells[i].innerHTML;
+                    cells[i].innerHTML = "";
+                }
             }
         }
-    }
 
-    setTimeout(function () {
-        for (let i = 0; i <= 15; i++) {
-            cells[i].style.transform = "translateX(0)";
+        for (let i = 14; i >= 0; i--) {
+            j = i + 1;
+            if (rightColumn.includes(i)) { continue }
+            else if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
+                cells[i].style.transform = "translateX(8px)";
+                cells[j].innerHTML = cells[i].innerHTML * 2;
+                cells[i].innerHTML = "";
+                cells[j].style.transform = "scale(1.12)"
+            }
         }
-    }, 100)
 
-    setColorAndScore();
-    addNum();
-    checkGameLose();
+        for (let i = 14; i >= 0; i--) {
+            if (rightColumn.includes(i)) { continue } //Skip right column
+            else {
+                for (j = i + 1; j <= 15 && cells[j].innerHTML == "" && !(rightColumn.includes(j - 1)); j++);
+
+                if (j - 1 != i && cells[i].innerHTML != "") {
+                    cells[j - 1].innerHTML = cells[i].innerHTML;
+                    cells[i].innerHTML = "";
+                }
+            }
+        }
+
+        setTimeout(function () {
+            for (let i = 0; i <= 15; i++) {
+                cells[i].style.transform = "translateX(0)";
+            }
+        }, 100)
+
+        setColorAndScore();
+        addNum();
+        checkGameLose();
+    }
 }
 
 function pushLeft() {
-    let j;
-    let leftColumn = [4, 8, 12];
-
-    for (let i = 1; i <= 15; i++) {
-        if (leftColumn.includes(i)) { continue } //Skip right column
-        else {
-            for (j = i - 1; j >= 0 && cells[j].innerHTML == "" && !(leftColumn.includes(j + 1)); j--);
-
-            if (j + 1 != i && cells[i].innerHTML != "") {
-                cells[i].style.transform = "translateX(-8px) scaleX(1.05)";
-                cells[j + 1].innerHTML = cells[i].innerHTML;
-                cells[i].innerHTML = "";
+    checkAllCells = false;
+    for (let cellPos = 0; cellPos <= 15; cellPos++) {
+        if (cells[cellPos].innerHTML == "") {
+            checkAllCells = true;
+        }
+    }
+    if (checkAllCells == false) {
+        for (let cellPos = 0; cellPos <= 15; cellPos++) {
+            if (cellPos % 4 == 0) {
+                continue;
+            }
+            if (cells[cellPos].innerHTML == cells[cellPos - 1].innerHTML) {
+                checkAllCells = true;
             }
         }
     }
 
-    for (let i = 1; i <= 15; i++) {
-        j = i - 1;
-        if (leftColumn.includes(i)) { continue }
-        else if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
-            cells[i].style.transform = "translateX(-8px)";
-            cells[j].innerHTML = cells[i].innerHTML * 2;
-            cells[i].innerHTML = "";
-            cells[j].style.transform = "scale(1.12)"
-        }
-    }
+    if (checkAllCells == true) {
+        let j;
+        let leftColumn = [4, 8, 12];
 
-    for (let i = 1; i <= 15; i++) {
-        if (leftColumn.includes(i)) { continue } //Skip right column
-        else {
-            for (j = i - 1; j >= 0 && cells[j].innerHTML == "" && !(leftColumn.includes(j + 1)); j--);
+        for (let i = 1; i <= 15; i++) {
+            if (leftColumn.includes(i)) { continue } //Skip left column
+            else {
+                for (j = i - 1; j >= 0 && cells[j].innerHTML == "" && !(leftColumn.includes(j + 1)); j--);
 
-            if (j + 1 != i && cells[i].innerHTML != "") {
-                cells[j + 1].innerHTML = cells[i].innerHTML;
-                cells[i].innerHTML = "";
+                if (j + 1 != i && cells[i].innerHTML != "") {
+                    cells[i].style.transform = "translateX(-8px) scaleX(1.05)";
+                    cells[j + 1].innerHTML = cells[i].innerHTML;
+                    cells[i].innerHTML = "";
+                }
             }
         }
-    }
 
-    setTimeout(function () {
-        for (let i = 0; i <= 15; i++) {
-            cells[i].style.transform = "translateX(0)";
+        for (let i = 1; i <= 15; i++) {
+            j = i - 1;
+            if (leftColumn.includes(i)) { continue }
+            else if (cells[j].innerHTML == cells[i].innerHTML && cells[i].innerHTML != "") {
+                cells[i].style.transform = "translateX(-8px)";
+                cells[j].innerHTML = cells[i].innerHTML * 2;
+                cells[i].innerHTML = "";
+                cells[j].style.transform = "scale(1.12)"
+            }
         }
-    }, 100)
 
-    setColorAndScore();
-    addNum();
-    checkGameLose();
+        for (let i = 1; i <= 15; i++) {
+            if (leftColumn.includes(i)) { continue } //Skip right column
+            else {
+                for (j = i - 1; j >= 0 && cells[j].innerHTML == "" && !(leftColumn.includes(j + 1)); j--);
+
+                if (j + 1 != i && cells[i].innerHTML != "") {
+                    cells[j + 1].innerHTML = cells[i].innerHTML;
+                    cells[i].innerHTML = "";
+                }
+            }
+        }
+
+        setTimeout(function () {
+            for (let i = 0; i <= 15; i++) {
+                cells[i].style.transform = "translateX(0)";
+            }
+        }, 100)
+
+        setColorAndScore();
+        addNum();
+        checkGameLose();
+    }
 }
